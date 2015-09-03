@@ -346,7 +346,7 @@
 				INFOPLIST_FILE = "Learn Notification/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c69c6bc6-960c-485c-a498-a17bfc859c53";
 			};
 			name = Debug;
 		};
@@ -357,7 +357,7 @@
 				INFOPLIST_FILE = "Learn Notification/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c69c6bc6-960c-485c-a498-a17bfc859c53";
 			};
 			name = Release;
 		};

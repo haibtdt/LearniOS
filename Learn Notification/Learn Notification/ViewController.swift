@@ -64,6 +64,22 @@ class ViewController: UIViewController {
 
     @IBAction func setUpRemoteNotif(sender: AnyObject) {
         
+        let iosMethod = Selector("registerForRemoteNotifications")
+        let sharedApp = UIApplication.sharedApplication()
+        if sharedApp.respondsToSelector(iosMethod) {
+            
+            sharedApp.registerForRemoteNotifications()
+            
+            
+        } else {
+            
+            //deprecated since iOS 8.0
+            let remoteNotifType  = UIRemoteNotificationType.Alert
+            sharedApp.registerForRemoteNotificationTypes(remoteNotifType)
+            
+        }
+        
+        
         
         
         
