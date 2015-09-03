@@ -156,6 +156,7 @@
 		46F007DF1B97E61A00390E1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Snapbuck;
 				TargetAttributes = {
@@ -345,6 +346,7 @@
 				INFOPLIST_FILE = "Learn Notification/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,6 +357,7 @@
 				INFOPLIST_FILE = "Learn Notification/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -411,6 +414,7 @@
 				46F008081B97E61A00390E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46F008091B97E61A00390E1E /* Build configuration list for PBXNativeTarget "Learn NotificationTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +423,7 @@
 				46F0080B1B97E61A00390E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Learn_Notification" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-2f-GDX">
+                                <rect key="frame" x="242" y="70" width="116" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Set up local notif"/>
+                                <connections>
+                                    <action selector="setUpLocalNotif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ebi-Y1-eF9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-la-5nq">
+                                <rect key="frame" x="234" y="114" width="132" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Set up remote notif"/>
+                                <connections>
+                                    <action selector="setUpRemoteNotif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Maa-lV-05k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttF-bd-uzG">
+                                <rect key="frame" x="231" y="152" width="139" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Register Notif Types"/>
+                                <connections>
+                                    <action selector="registerNotifTypes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qyz-z8-srR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouo-gD-rww">
+                                <rect key="frame" x="222" y="535" width="156" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Clear scheduled Notifs"/>
+                                <connections>
+                                    <action selector="clearScheduledNotifs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUl-Ug-7Yg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rRV-la-5nq" firstAttribute="top" secondItem="1Ze-2f-GDX" secondAttribute="bottom" constant="14" id="240-Rf-BSL"/>
+                            <constraint firstItem="ouo-gD-rww" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9WC-Kg-o4m"/>
+                            <constraint firstItem="1Ze-2f-GDX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D14-D3-ywp"/>
+                            <constraint firstItem="ttF-bd-uzG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hr0-l4-m2B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ouo-gD-rww" secondAttribute="bottom" constant="35" id="NfY-34-5nk"/>
+                            <constraint firstItem="1Ze-2f-GDX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Pzz-Vx-pbj"/>
+                            <constraint firstItem="ttF-bd-uzG" firstAttribute="top" secondItem="rRV-la-5nq" secondAttribute="bottom" constant="8" id="d3Y-8a-yJT"/>
+                            <constraint firstItem="rRV-la-5nq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ozA-Gm-gPi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="452" y="362"/>
         </scene>
     </scenes>
 </document>
