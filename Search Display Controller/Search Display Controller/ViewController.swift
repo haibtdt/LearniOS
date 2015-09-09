@@ -9,18 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController, UISearchControllerDelegate {
-    
+
     var searchController : UISearchController? = nil
     let mySearchResultUpdater = MySearchResultUpdater()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setUpSearchController()
+
         
     }
 
 
-    func setUpSearch () -> Void {
+    func setUpSearchController () -> Void {
         
         var mySearchResultsVC = self.storyboard?.instantiateViewControllerWithIdentifier("MySearchResultsViewController") as? MySearchResultsViewController
         if mySearchResultsVC != nil {
@@ -29,17 +31,56 @@ class ViewController: UIViewController, UISearchControllerDelegate {
             searchController?.searchResultsUpdater = mySearchResultUpdater
             searchController?.delegate = self
             
+            searchBarWrapperView.addSubview((searchController?.searchBar)!)
+            positionTheSearchBar()
         }
+        
+    }
+    
+    
+    
+    @IBOutlet weak var searchBarWrapperView: UIView!
+    var searchBarContraints : [AnyObject]? = nil
+
+    func positionTheSearchBar () -> Void {
+        
+        if searchBarContraints == nil {
+            
+            searchBarContraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[searchBar]-0-|",
+                options: nil,
+                metrics: nil,
+                views: ["searchBar":(searchController?.searchBar)!])
+            let verticalConstraint = NSLayoutConstraint(item: searchController!.searchBar,
+                attribute: .Top,
+                relatedBy:.Equal,
+                toItem: searchBarWrapperView,
+                attribute: .Top,
+                multiplier: 1.0,
+                constant: 0.0)
+            searchBarContraints?.append(verticalConstraint)
+            
+        }
+        
+        searchController?.searchBar.setTranslatesAutoresizingMaskIntoConstraints(false)
+        searchBarWrapperView.addConstraints(searchBarContraints!)
+        
+    }
+    
+    func resetSearchBarPostion () -> Void {
+        
+        searchBarWrapperView.removeConstraints(searchBarContraints!)
+        searchController?.searchBar.setTranslatesAutoresizingMaskIntoConstraints(true)
+        searchController?.searchBar.sizeToFit()
         
     }
     
     
     @IBAction func search(sender: AnyObject) {
         
-        setUpSearch()
         searchController?.active = true
         
     }
+    
     
     
     func willPresentSearchController(searchController: UISearchController) {
@@ -63,19 +104,19 @@ class ViewController: UIViewController, UISearchControllerDelegate {
     
     func didDismissSearchController(searchController: UISearchController) {
         
+        positionTheSearchBar()
         
     }
     
-//     Called after the search controller's search bar has agreed to begin editing or when 'active' is set to YES. If you choose not to present the controller yourself or do not implement this method, a default presentation is performed on your behalf.
     func presentSearchController(searchController: UISearchController) {
         
+        resetSearchBarPostion()
         self.presentViewController(searchController, animated: true) { () -> Void in
             
-            
-            
+            self.searchController?.searchBar.becomeFirstResponder()
+
         }
 
-        
     }
 
     
