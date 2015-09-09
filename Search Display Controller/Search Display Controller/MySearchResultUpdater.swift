@@ -8,6 +8,13 @@
 
 import UIKit
 
-class MySearchResultUpdater: NSObject {
-   
+class MySearchResultUpdater: NSObject, UISearchResultsUpdating {
+    
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    
+        
+        
+    }
+
 }

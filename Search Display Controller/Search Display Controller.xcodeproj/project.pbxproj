@@ -13,6 +13,8 @@
 		46C5EC841B9FC94F00D7B503 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C5EC831B9FC94F00D7B503 /* Images.xcassets */; };
 		46C5EC871B9FC94F00D7B503 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C5EC851B9FC94F00D7B503 /* LaunchScreen.xib */; };
 		46C5EC931B9FC94F00D7B503 /* Search_Display_ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C5EC921B9FC94F00D7B503 /* Search_Display_ControllerTests.swift */; };
+		46C5EC9D1B9FD8E500D7B503 /* MySearchResultUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C5EC9C1B9FD8E500D7B503 /* MySearchResultUpdater.swift */; };
+		46C5EC9F1B9FDA6300D7B503 /* MySearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C5EC9E1B9FDA6300D7B503 /* MySearchResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		46C5EC8C1B9FC94F00D7B503 /* Search Display ControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Search Display ControllerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C5EC911B9FC94F00D7B503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C5EC921B9FC94F00D7B503 /* Search_Display_ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search_Display_ControllerTests.swift; sourceTree = "<group>"; };
+		46C5EC9C1B9FD8E500D7B503 /* MySearchResultUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySearchResultUpdater.swift; sourceTree = "<group>"; };
+		46C5EC9E1B9FDA6300D7B503 /* MySearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,10 @@
 		46C5EC791B9FC94F00D7B503 /* Search Display Controller */ = {
 			isa = PBXGroup;
 			children = (
+				46C5EC9E1B9FDA6300D7B503 /* MySearchResultsViewController.swift */,
 				46C5EC7C1B9FC94F00D7B503 /* AppDelegate.swift */,
 				46C5EC7E1B9FC94F00D7B503 /* ViewController.swift */,
+				46C5EC9C1B9FD8E500D7B503 /* MySearchResultUpdater.swift */,
 				46C5EC801B9FC94F00D7B503 /* Main.storyboard */,
 				46C5EC831B9FC94F00D7B503 /* Images.xcassets */,
 				46C5EC851B9FC94F00D7B503 /* LaunchScreen.xib */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C5EC9D1B9FD8E500D7B503 /* MySearchResultUpdater.swift in Sources */,
 				46C5EC7F1B9FC94F00D7B503 /* ViewController.swift in Sources */,
 				46C5EC7D1B9FC94F00D7B503 /* AppDelegate.swift in Sources */,
+				46C5EC9F1B9FDA6300D7B503 /* MySearchResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

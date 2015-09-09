@@ -9,17 +9,45 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var searchController : UISearchController? = nil
+    let mySearchResultUpdater = MySearchResultUpdater()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
+    func setUpSearch () -> Void {
+        
+        var mySearchResultsVC = self.storyboard?.instantiateViewControllerWithIdentifier("MySearchResultsViewController") as? MySearchResultsViewController
+        if mySearchResultsVC != nil {
+            
+            searchController = UISearchController(searchResultsController: mySearchResultsVC)
+            searchController?.searchResultsUpdater = mySearchResultUpdater
+            
+            
+        }
+        
+    }
+    
+    
+    @IBAction func search(sender: AnyObject) {
+        
+        setUpSearch()
+        self.presentViewController(searchController!, animated: true) { () -> Void in
+            
+            
+            
+        }
+        
+    }
+    
+    
+    
 }
+
+
 
