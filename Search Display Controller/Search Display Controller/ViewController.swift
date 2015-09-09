@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchControllerDelegate {
     
     var searchController : UISearchController? = nil
     let mySearchResultUpdater = MySearchResultUpdater()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             
             searchController = UISearchController(searchResultsController: mySearchResultsVC)
             searchController?.searchResultsUpdater = mySearchResultUpdater
-            
+            searchController?.delegate = self
             
         }
         
@@ -37,15 +37,47 @@ class ViewController: UIViewController {
     @IBAction func search(sender: AnyObject) {
         
         setUpSearch()
-        self.presentViewController(searchController!, animated: true) { () -> Void in
-            
-            
-            
-        }
+        searchController?.active = true
         
     }
     
     
+    func willPresentSearchController(searchController: UISearchController) {
+        
+        
+        
+    }
+    
+    func didPresentSearchController(searchController: UISearchController) {
+        
+        
+    }
+    
+    
+    func willDismissSearchController(searchController: UISearchController){
+        
+        
+        
+    }
+    
+    
+    func didDismissSearchController(searchController: UISearchController) {
+        
+        
+    }
+    
+//     Called after the search controller's search bar has agreed to begin editing or when 'active' is set to YES. If you choose not to present the controller yourself or do not implement this method, a default presentation is performed on your behalf.
+    func presentSearchController(searchController: UISearchController) {
+        
+        self.presentViewController(searchController, animated: true) { () -> Void in
+            
+            
+            
+        }
+
+        
+    }
+
     
 }
 
