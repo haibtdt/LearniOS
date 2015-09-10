@@ -16,7 +16,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let blueLayer = CALayer()
+        blueLayer.frame = CGRectMake(50.0, 50.0, 100.0, 100.0)
+        blueLayer.backgroundColor = UIColor.blueColor().CGColor
         
+        
+        //add it to our view
+        layerView.layer.addSublayer(blueLayer)
         
         
     }
