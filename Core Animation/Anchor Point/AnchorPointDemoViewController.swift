@@ -21,6 +21,10 @@ class AnchorPointDemoViewController: UIViewController {
         setUpView()
 
         
+//        viewOfInterest.layer.anchorPoint = CGPointMake(1/2, 1/2)
+//        viewOfInterest.layer.anchorPoint = CGPointMake(0, 0)
+        viewOfInterest.layer.anchorPoint = CGPointMake(1/4, 1/4)
+        viewOfInterest.transform = CGAffineTransformMakeRotation(3.1418/4)
         
     
     
