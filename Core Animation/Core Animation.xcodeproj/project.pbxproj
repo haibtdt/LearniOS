@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		467AA5CA1BA6DA0C00FF7423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B2F9701BA18AE1000C3CF1 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		467AA5CB1BA6DE7E00FF7423 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B2F97B1BA191E4000C3CF1 /* QuartzCore.framework */; settings = {ASSET_TAGS = (); }; };
 		46AEE56D1BA6D6AC00B04431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AEE56C1BA6D6AC00B04431 /* AppDelegate.swift */; };
 		46AEE56F1BA6D6AC00B04431 /* AnchorPointDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AEE56E1BA6D6AC00B04431 /* AnchorPointDemoViewController.swift */; };
 		46AEE5721BA6D6AC00B04431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AEE5701BA6D6AC00B04431 /* Main.storyboard */; };
-		46AEE5741BA6D6AC00B04431 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AEE5731BA6D6AC00B04431 /* Images.xcassets */; };
 		46AEE5771BA6D6AC00B04431 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AEE5751BA6D6AC00B04431 /* LaunchScreen.xib */; };
 		46AEE5831BA6D6AC00B04431 /* Anchor_PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AEE5821BA6D6AC00B04431 /* Anchor_PointTests.swift */; };
 		46B2F96A1BA18AE1000C3CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2F9691BA18AE1000C3CF1 /* AppDelegate.swift */; };
@@ -37,7 +38,6 @@
 		46AEE56C1BA6D6AC00B04431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46AEE56E1BA6D6AC00B04431 /* AnchorPointDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPointDemoViewController.swift; sourceTree = "<group>"; };
 		46AEE5711BA6D6AC00B04431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		46AEE5731BA6D6AC00B04431 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46AEE5761BA6D6AC00B04431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		46AEE57C1BA6D6AC00B04431 /* Anchor PointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anchor PointTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AEE5811BA6D6AC00B04431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467AA5CB1BA6DE7E00FF7423 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +85,6 @@
 				46AEE56C1BA6D6AC00B04431 /* AppDelegate.swift */,
 				46AEE56E1BA6D6AC00B04431 /* AnchorPointDemoViewController.swift */,
 				46AEE5701BA6D6AC00B04431 /* Main.storyboard */,
-				46AEE5731BA6D6AC00B04431 /* Images.xcassets */,
 				46AEE5751BA6D6AC00B04431 /* LaunchScreen.xib */,
 				46AEE56A1BA6D6AC00B04431 /* Supporting Files */,
 			);
@@ -254,7 +254,7 @@
 			files = (
 				46AEE5721BA6D6AC00B04431 /* Main.storyboard in Resources */,
 				46AEE5771BA6D6AC00B04431 /* LaunchScreen.xib in Resources */,
-				46AEE5741BA6D6AC00B04431 /* Images.xcassets in Resources */,
+				467AA5CA1BA6DA0C00FF7423 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +361,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Anchor Point/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -372,7 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Anchor Point/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -452,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -491,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
